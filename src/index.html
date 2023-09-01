@@ -1,0 +1,49 @@
+<!--
+    Referencing this tutorial by Erik Terwan
+    https://codepen.io/erikterwan/pen/EVzeRP
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <nav role="navigation">
+        <div id="menuToggle">
+            <!--
+                A hidden checkbox is used as a click receiver
+                to toggle the menu using the :checked selector
+            -->
+
+            <input type="checkbox" />
+
+            <!--
+                Some spans to form the "hamburger"
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--
+                "Too bad the menu has to be inside of the button" - quoth the original code
+                That's interesting - I wonder if there are workarounds that solve this differently.
+            -->
+            
+            <ul id="menu">
+                <a href=#><li>Home</li></a>
+                <a href=#><li>About</li></a>
+                <a href=#><li>Info</li></a>
+                <a href=#><li>Contact</li></a> <!--What do these anchor elements do?-->
+                <a href="https://github.com/johanhobbs/"> <li>Github</li> </a>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>
