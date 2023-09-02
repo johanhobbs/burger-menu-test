@@ -1,0 +1,113 @@
+/* Attempting to make my own menu from what I've learned */
+
+/*
+ * Troubleshooting: highlights every major element using a different colour,
+ * so I can tell where every item begins and ends.
+ */                                                                     
+
+.titlebar, .content{
+    background-color: #DFF;
+    outline: #379 solid 2px;
+}
+
+.navmenu{
+    background-color: salmon;
+    outline: red solid 2px;
+}
+
+.menuwrapper li{
+    background-color: #FFB;
+    outline: gold solid 2px;
+}
+
+/********************************
+ * The "real" CSS starts here   *
+ ********************************/
+
+/* First setting some defaults*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+}
+
+.titlebar{
+    padding: 8px;
+}
+
+.navmenu{
+    padding: 24px;
+}
+
+.navmenu ul li{
+    list-style: none;
+    margin-top: 12px;
+}
+
+/* Hiding the checkbox */
+input.checkbox{
+    display: none;
+}
+
+/* Setting up the burger */
+
+.burgerbox{
+    position: relative;
+    display: block;
+    width:45px;
+    height: 45px;
+    background-color: #fff8;
+    outline: #fff8 2px solid;
+    outline-offset: 14px;
+    border-radius: 50%;
+    transition: outline 0.8s ease, outline-offset 0.1s ease;
+}
+
+/* The burger bits in their default position */
+.burgerpiece {
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #222;
+    transform: translateY(0) rotate(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.burgerbox .burgerpiece:not(:first-child){
+    margin-top: 15px;
+}
+
+/* The menu wrapper */
+.menuwrapper li{
+    transform: translateX(0);
+    transition: 0.8s ease;
+}
+
+#burgercheck:checked ~ .burgerbox{
+    outline: #fff8 8px solid;
+    outline-offset: 8px;
+    transition: outline 0.1s ease, outline-offset 0.8s ease;
+}
+
+#burgercheck:checked ~ .burgerbox .burgerpiece:nth-child(1){
+    transform: translateY(20px) rotate(225deg);
+    transition: 0.4s ease;
+}
+
+#burgercheck:checked ~ .burgerbox .burgerpiece:nth-child(2){
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#burgercheck:checked ~ .burgerbox .burgerpiece:nth-child(3){
+    transform: translateY(-20px) rotate(135deg);
+    transition: 0.4s ease;
+}
+
+#burgercheck:checked ~ .menuwrapper li{
+    transform: translateX(-150%);
+    transition: 0.8s ease;
+}
