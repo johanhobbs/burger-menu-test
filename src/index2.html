@@ -1,0 +1,38 @@
+<!-- 
+    Using tutorial from unused-css.com
+    https://unused-css.com/blog/css-only-hamburger-menu/
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- As with the other tutorial we did earlier, it looks like we're using a checkbox element to toggle the menu -->
+    <div class="hamburger-container">
+        <input
+        type="checkbox" id="hamburger-toggle" class="checkbox"
+        aria-label="Toggle Navigation"
+        /> <!-- Close input-->
+        
+        <label for="hamburger-toggle" class="hamburger">
+            <span class="slice"></span>
+            <span class="slice"></span>
+            <span class="slice"></span>
+        </label>
+        <div class = "drawer">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#">Home</a></li>
+                <li class="nav-list-item"><a href="#">About</a></li>
+                <li class="nav-list-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
